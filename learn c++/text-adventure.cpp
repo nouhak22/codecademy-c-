@@ -11,6 +11,7 @@ int main() {
   int heal = 0;
   int sword = 0;
 
+//fisrt task
   std::cout << "=========================================\n-Welcome to the jedi Academy of Coruscent!\n\n-Today you will have multiple tests to figure out\n what weaknesses and forces you possess!\n=========================================\n-Come along students! we'll be entering the first room now.\n=========================================\n-This is the grand library where all knowledge of the jedi order is stored and protected.\n\n-this first exercise is nothing too complicated.\nyou'll only be tasked to pick a book and read it!\n=========================================\n1.Healing of the force\n2.Weapon of protection\n3.The code\n=========================================\n";
 
   std::cout << "Type your answer:";
@@ -48,6 +49,7 @@ int main() {
     std::cout << "\n=========================================\nThere is no emotion, there is peace.\nThere is no ignorance, there is knowledge.\nThere is no passion, there is serenity.\nThere is no chaos, there is harmony.\nThere is no death, there is the Force.\n\nWhile the Jedi Code forbade possession and attachments, the Jedi were encouraged and trained to love in terms of compassion. Attachment was the inability to accept change as the fundamental characteristic of life; to accept death as the natural part of life; the inability to let go. Feeding into fear of loss and greed, leading to jealousy, attachment was selfish, a shadow of greed and thus a path of the dark side of the Force. Therefore, attachment was forbidden for a Jedi, who had to train themselves to let go of everything they were afraid to lose; to renounce all attachments. Thus, they could be compassionate and loving and caring, but not be possessive and grabbing and holding on to things, trying to keep them frozen in time, accepting the transitional nature of life. This allowed them to love the totality of life unconditionally without selectively choosing individual life-forms to become selfishly attached to.\n=========================================\n";
   }
   
+  //second task
   std::cout << "-Good work students!\n Now we'll be entering the training area for another test.\n=========================================\n-In this room you'll be faced with a problem with three different outcome. It's for you to choose the one that makes the most sense to you!\n=========================================\n-You're trapped! Enemy troops are on the way and you have two clones with you and one got shot in the leg, reenforcement are there in 45.\n\n1.use the force to barricade the place until reenforcement are there.\n2.heal the clone's leg and use the force to try and find an escape.\n3.go out front and hold the fort until reenforcement are there.\n=========================================\n ";
 
   std::cout << "Type your answer:";
@@ -66,7 +68,7 @@ int main() {
     heal++;
 
   }
-  else if (task2 == 1) {
+  else if (task2 == 3) {
 
     force++;
     sword++;
@@ -78,10 +80,62 @@ int main() {
     force++;
     sword++;
     force++;
+
+  }
+
+//third task
+  std::cout << "-Good work students! Now we'll be going in the meditation room.\n=========================================\n-This room is where all jedi find their final path though channeling midiclorian inside their minds!\n-Please sit and let your mind guide you to your destiny.\n";
+  std::cout << "-You are now inside your mind and need to concentrate on what's underneath and ahead,sounds confusing but it'll make sense when you'll be done. ";
+  std::cout << "1.green the pain of war won't troube you\n2.BLUE the strenght to win all the battle\n3.WHITE is the way to make one in all\n=========================================\n";
+
+  std::cout << "Type your answer:";
+  std::cin >> task3;
+
+  while (task3 < 1 || task3 > 3) {
+
+    std::cout << "\nWrong input, please try again!\n";
+    std::cin >> task3;
+ 
+  }
+  if (task3 == 3) {
+
+    force++;
+    heal++;
+    heal++;
+
+  }
+  else if (task3 == 2) {
+
+    force++;
+    sword++;
+    sword++;
+
+  }
+  else if (task3 == 1) {
+
+    force++;
+    sword++;
+    force++;
+
+  }
+
+  if (heal > sword && heal > force) {
+
+    std::cout << "You're a healer\n";
+
+  }
+  else if (sword > heal && sword > force) {
+
+    std::cout << "You're a fighter\n";
+
+  }
+  else if (force > sword && force > heal) {
+
+    std::cout << "The force is strong with you young padawan\n";
 
   }
   std::cout << force << sword << heal;
-  
 
-   
+
+
 }
